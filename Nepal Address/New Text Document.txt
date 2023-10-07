@@ -1,0 +1,200 @@
+<script>
+            
+
+
+
+
+            var prov=document.getElementById("prov");
+            console.log(prov);
+
+            var prov_list = [
+            "Province-No.1",
+            "Province-No.2",
+            "Bagmati-Province",
+            "Gandaki-Province",
+            "Lumbini-Province",
+            "Karnali-Province",
+            "Sudurpashchim-Province",
+          ];
+          
+          function cou(list, result) {
+                for (i = 0; i < list.length; i++) {
+                var opt = list[i];
+                result.innerHTML += `<option value=${opt}> ${opt} </option>`;
+            }
+        };
+          
+            cou(prov_list, prov)
+    
+          function district() {
+            var proval = document.getElementById("prov").value;
+            console.log(proval);
+            var dist = document.getElementById("dist");
+            if (proval == "") {
+                dist.innerHTML = `<option value=''> District </option>`;
+
+            }
+            else if (proval == "Province-No.1") {
+              dist.innerHTML = "";
+              var p1 = [
+                "Bhojpur",
+                "Dhankuta",
+                "Ilam",
+                "Jhapa",
+                "Khotang",
+                "Morang",
+                "Okhaldhunga",
+                "Panchthar",
+                "Sankhuwasabha",
+                "Solukhumbu",
+                "Sunsari",
+                "Taplejung",
+                "Terhathum",
+                "Udayapur",
+              ];
+              cou(p1, dist);
+            } else if (proval == "Province-No.2") {
+              dist.innerHTML = "";
+              var p2 = [
+                "Bara",
+                "Dhanusa",
+                "Mahottari",
+                "Parsa",
+                "Rautahat",
+                "Saptari",
+                "Sarlahi",
+                "Siraha",
+              ];
+              console.log(p2);
+              cou(p2, dist);
+            } else if (proval == "Bagmati-Province") {
+              dist.innerHTML = "";
+              var p2 = [
+                "Kathmandu",
+                "Lalitpur",
+                "Bhaktapur",
+                "Nuwakot",
+                "Makwanpur",
+                "Kavrepalanchok",
+                "Chitwan",
+                "Dhading",
+                "Dolakha",
+                "Ramechhap",
+                "Rasuwa",
+                "Sindhuli",
+                "Sindhupalchok",
+              ];
+              console.log(p2);
+              cou(p2, dist);
+            } else if (proval == "Gandaki-Province") {
+              dist.innerHTML = "";
+              var p2 = [
+                "Baglung",
+                "Gorkha",
+                "Kaski",
+                "Lamjung",
+                "Manang",
+                "Mustang",
+                "Myagdi",
+                "Nawalpur",
+                "Parbat",
+                "Syangja",
+                "Tanahun",
+              ];
+              console.log(p2);
+              cou(p2, dist);
+            } else if (proval == "Lumbini-Province") {
+              dist.innerHTML = "";
+              var p2 = [
+                "Arghakhanchi",
+                "Banke",
+                "Bardiya",
+                "Dang",
+                "Gulmi",
+                "Eastern Rukum",
+                "Kapilvastu",
+                "Palpa",
+                "Parasi",
+                "Pyuthan",
+                "Rolpa",
+                "Rupandehi",
+              ];
+              console.log(p2);
+              cou(p2, dist);
+            } else if (proval == "Karnali-Province") {
+              dist.innerHTML = "";
+              var p2 = [
+                "Dailekh",
+                "Dolpa",
+                "Humla",
+                "Jajarkot",
+                "Jumla",
+                "Kalikot",
+                "Mugu",
+                "Salyan",
+                "Surkhet",
+                "Western Rukum",
+              ];
+              console.log(p2);
+              cou(p2, dist);
+            } else if (proval == "Sudurpashchim-Province") {
+              dist.innerHTML = "";
+              var p2 = [
+                "Achham",
+                "Baitadi",
+                "Bajhang",
+                "Bajura",
+                "Dadeldhura",
+                "Darchula",
+                "Doti",
+                "Kailali",
+                "Kanchanpur",
+              ];
+              console.log(p2);
+              cou(p2, dist);
+            }
+        }
+
+
+            function muni() {
+            var district = document.getElementById("dist").value;
+            var proval = document.getElementById("prov").value;
+
+            console.log('wowowow',municipality);
+            var municipality = document.getElementById("municipality");
+            if (district == "" || proval=='' ) {
+                municipality.innerHTML = `<option value=''> Choose Municipality </option>`;
+
+            }
+            else if (district == "Kathmandu") {
+                municipality.innerHTML = "";
+              var m1 = [
+                "Bhojpur",
+                "Dhankuta",
+                "Ilam",
+                "Jhapa",
+                "Khotang",
+                "Morang",
+                "Okhaldhunga",
+                "Panchthar",
+                "Sankhuwasabha",
+                "Solukhumbu",
+                "Sunsari",
+                "Taplejung",
+                "Terhathum",
+                "Udayapur",
+              ];
+              cou(m1, municipality);
+            }
+        };
+        
+    
+            // const form = document.getElementById("form");
+            // var country = document.getElementById("country").value;
+            // var province = document.getElementById("prov").value;
+            // var district = document.getElementById("dist").value;
+        
+
+          
+       
+        </script>
